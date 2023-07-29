@@ -1,0 +1,80 @@
+.media {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    /* padding: 3px; */
+    margin: 5px 0;
+    background-color: black;
+    border: 1px solid black;
+    box-shadow: 2px;
+    border-radius: 15px;
+}
+/* TransitionModel CSS */
+.display{
+    display: flex;
+        flex-direction: row;
+        
+        justify-content: center;
+        border-bottom: 1px solid lightgray;
+        gap: 20px;
+}
+
+.sty{
+    display: flex;
+        flex-direction: column;
+        margin: 5px;
+}
+.btnMain {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn {
+    margin-right: 20px;
+    color: white;
+}
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+@media (max-width:550px) {
+    .media {
+        width: 100%;
+    }
+        .title {
+            color: white;
+            padding-top: 10px;
+            text-align: center;
+        /* word-wrap: break-word; */
+        white-space: pre-wrap;
+        }
+}
+
+.title {
+    color: white;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.subtitle {
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.poster {
+    height: 300px;
+    border-radius: 15px;
+}
+
+.ChipStyle {
+    margin-left: 5px;
+    text-align: left;
+
+}
