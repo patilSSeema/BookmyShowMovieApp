@@ -11,37 +11,24 @@ const API_KEY = "7f46651666f1ca68e4cf0cb150551f07";
 const Search = () => {
   const [searchText, setSearchText] = useState("");
   const [movie, setMovie] = useState([]);
-  const [timeoutId, setTimeoutId] = useState(null);
+
   const fetchSearch = async () => {
     try {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/search/movie?query=${searchText}&api_key=${API_KEY}`
       );
       setMovie(data.results);
-
-      // console.log(data);
     } catch (error) {
       console.error(error);
     }
   };
-  const textInputChange = (e) => {
-    clearTimeout(timeoutId);
-    setSearchText(e.target.value);
-    const newTimeoutId = setTimeout(() => {
-      fetchSearch(e.target.value);
-    }, 500);
-    setTimeoutId(newTimeoutId);
-  };
 
-  useEffect(() => {
-    fetchSearch();
-  });
   return (
     <>
       <div className="main-search">
         <Link to="/">
           <div className="back">
-            <IoIosArrowBack size={30} color="gray" />
+            <IoIosArrowBack size={30} color="white" />
           </div>
         </Link>
         <div className="input-style">
@@ -49,8 +36,13 @@ const Search = () => {
             type="text"
             placeholder="Search Movie"
             autoFocus
-            onChange={textInputChange}
+            onChange={(e) => setSearchText(e.target.value)}
           />
+        </div>
+        <div>
+          <button className="searchbtn" onClick={fetchSearch}>
+            Search
+          </button>
         </div>
         <Link to="/">
           <div className="close">

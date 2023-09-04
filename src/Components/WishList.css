@@ -1,0 +1,23 @@
+.wishlist-body {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.wishlistHeader {
+  background-color: black;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: left;
+ 
+}
+.wishlistHeader h3 {
+  text-align: center;
+  color: white;
+  margin-left: 200px;
+ 
+}
+.wishlistHeader .back{
+  margin-top: 20px;
+  margin-right: 300px;
+}

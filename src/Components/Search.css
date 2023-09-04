@@ -1,72 +1,64 @@
-.main-search{
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: lightgray;
+.main-search {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: lightgray;
 }
-.input-style input{
+.input-style input {
+  border: none;
+  height: 40px;
+  width: 500px;
+  background-color: white;
+  padding: 10px;
+}
+.close {
+  opacity: 10;
+  margin-left: 200px;
+  color: white;
+}
+.displayResult {
+  display: flex;
+  gap: 30px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.back {
+  margin-right: 200px;
+}
+.searchbtn {
+  margin-left: 3px;
+  height: 40px;
+}
+@media screen and (max-width: 768px) {
+  .close {
+    opacity: 0;
+  }
+  .input-style input {
     border: none;
-    height: 40px;
-    width: 500px;
+    position: relative;
+    height: 30px;
+    width: 200px;
     background-color: white;
-    padding: 10px;
-}
-.close{
-    opacity: 10;
-}
-.displayResult{
-    display: flex;
-        gap: 30px;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-}
-@media screen and (max-width: 500px) {
-    .close {
-            opacity: 0;
-        }
-                .input-style input {
-                    border: none;
-                    height: 35px;
-                    width: 200px;
-                    background-color: white;
-                    margin-top: 0;
-                }
-                .main-search{
-                    justify-content: flex-start;
-                    background-color: gray;
-                    height: 80px;
-                    flex-wrap: nowrap;
-                }
-                .back{
-                    background-color: white;
-                    justify-content: center;
-                    height: 35px;
-                }
-}
-@media screen and (max-width: 620px) {
-    .close {
-        opacity: 0;
-    }
-
-    .input-style input {
-        border: none;
-        height: 35px;
-        width: 300px;
-        background-color: white;
-        margin-top: 0;
-    }
-
-    .main-search {
-        justify-content: flex-start;
-        background-color: gray;
-        height: 80px;
-        flex-wrap: nowrap;
-    }
-
-    .back {
-        background-color: white;
-        justify-content: center;
-        height: 35px;
-    }
+    margin-top: 0;
+    font-size: 10px;
+  }
+  .main-search {
+    justify-content: flex-start;
+    background-color: gray;
+    height: 80px;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .back {
+    justify-content: center;
+    margin-top: 3px;
+    size: 20;
+  }
+  .searchbtn {
+    margin-left: 5px;
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+  }
 }

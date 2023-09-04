@@ -21,8 +21,9 @@
 }
 
 .activeChip {
-    border: 1px solid #005fdb;
-    color: #005fdb;
+    
+    color:white;
+    background-color: aquamarine;
 }
 
 .title {

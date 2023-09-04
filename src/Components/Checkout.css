@@ -1,0 +1,118 @@
+h2 {
+  text-align: center;
+}
+h4 {
+  text-align: center;
+  color: white;
+  background-color: darkturquoise;
+  margin-bottom: 10px;
+}
+
+.MainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.Info1,
+.Info2 {
+  background-color: rgb(201, 197, 197);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Info1 p,
+.Info2 p,
+.Info2 h3 {
+  margin: 10px 0;
+}
+
+.user-details input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.user-details input[type="radio"] {
+  margin-right: 5px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.error {
+  color: red;
+ 
+  
+}
+
+@media screen and (max-width: 768px) {
+  .Info1,
+  .Info2 {
+    padding: 15px;
+  }
+  .Info2 label {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .user-details input[type="radio"] {
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
+}
+
+/* css for submitcheckout */
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.submitsCSS {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.linkC {
+  text-decoration: none;
+  font-size: 18px;
+  color: #007bff;
+}

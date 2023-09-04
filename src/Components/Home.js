@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { getGenre, getMoviesWithGenreId } from "../API/movies";
 import DisplayMovies from "./DisplayMovies";
 import styles from "./Home.module.css";
-import Navbar from "./Navbar";
+import NavbarCom from "./NavbarCom";
 
-// import Navbar from "./Components/Navbar";
 
 function Home(props) {
   const [allGenres, setAllGenres] = useState([]);
@@ -28,6 +27,7 @@ function Home(props) {
       if (!res) return;
       if (page === 1) {
         setMovies(res.results);
+        console.log(res.results);
       } else {
         setMovies((prev) => [...prev, ...res?.results]);
       }
@@ -58,7 +58,7 @@ function Home(props) {
 
   return (
     <>
-      <Navbar name={props.name} />
+      <NavbarCom name={props.name} />
       <div className={styles.container}>
         <div className={styles.header}>
           {allGenres.map((item) => (

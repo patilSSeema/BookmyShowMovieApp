@@ -14,7 +14,7 @@ const Login = () => {
   const [submitButtonDisable, setSubmitButtonDisable] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     if (!values.email || !values.password) {
       setErr("Please fill all fields");
       return;
